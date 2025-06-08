@@ -25,7 +25,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: eu-central-1
         run: |
-          aws s3 cp app.zip s3://elasticbeanstalk-eu-central-1-998698767918/app.zip
+          aws s3 cp app.zip s3://elasticbeanstalk-eu-central-1-998698767918/goit-aws-final.zip
 
       - name: Deploy to Elastic Beanstalk
         env:
@@ -35,7 +35,7 @@ jobs:
         run: |
           aws elasticbeanstalk create-application-version --application-name final-project-eb \
             --version-label v_${{ github.run_number }} \
-            --source-bundle S3Bucket=elasticbeanstalk-eu-central-1-998698767918,S3Key=app.zip \
+            --source-bundle S3Bucket=elasticbeanstalk-eu-central-1-998698767918,S3Key=goit-aws-final.zip \
             --region $AWS_REGION
           aws elasticbeanstalk update-environment --environment-name final-project-eb-env \
             --version-label v_${{ github.run_number }} \
