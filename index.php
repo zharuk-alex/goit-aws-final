@@ -23,7 +23,7 @@
     }
     echo "Success!";
     ?>
-    <p>MySQL:<?= json_encode($result); ?></p>
+    <p>github test</p>
 </body>
 
 </html>
