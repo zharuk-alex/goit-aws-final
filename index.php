@@ -53,7 +53,7 @@
          <div class="row">
 
              <?
-                foreach ($post as $key => $posts) {
+                foreach ($posts as $key => $post) {
                 ?>
 
                  <div class="card" style="width: 18rem;">
@@ -62,7 +62,7 @@
                          <p class="card-text"><?= $post['title']; ?></p>
                      </div>
                  </div>
-                 
+
              <?
                 }
                 ?>
